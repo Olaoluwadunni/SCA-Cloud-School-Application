@@ -1,7 +1,7 @@
 print ('Welcome to SCA  Cloud School Application')
 print ('Hello, My name is Oluwatimileyin Akinpelu. Here is my simple code written in Python:')
 def addition():
-    a = 10
+    a = 50
     b = 30
     print(a + b)
 
