@@ -8,13 +8,13 @@ def addition():
 addition()
 
 
-def addition():
-    a = int(input("Enter a number. "))
-    b = int(input("Please enter another number. "))
-    print(a + b)
+# def addition():
+#     a = int(input("Enter a number. "))
+#     b = int(input("Please enter another number. "))
+#     print(a + b)
 
 
-addition()
+# addition()
 
 # *args and **kwargs
 def application(fname, lname, Homeaddress, email, *args, **kwargs):
