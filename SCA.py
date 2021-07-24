@@ -18,7 +18,7 @@ addition()
 
 # *args and **kwargs
 def application(fname, lname, Homeaddress, email, *args, **kwargs):
-    print("{} {} lives at {}. Her email is {}.".format(fname, lname, Homeaddress, email))
+    print("{} {} lives at {}. Her email address is {}.".format(fname, lname, Homeaddress, email))
 
 
 application("Oluwatimileyin", "Akinpelu", "Akute, Ogun state", "oluwatimileyinakinpelu49@gmail.com.",)
