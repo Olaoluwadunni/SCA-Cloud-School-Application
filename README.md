@@ -9,3 +9,29 @@ I wrote a simple code, in my language of choice (python) on my local machine and
 I integrated my github repo to your Jenkins.
 I setup a build job on Jenkins.
 On submission , I shared the url to access my jenkin server also adviced the username and password for login.
+
+
+pipeline {
+    agent any
+
+    stages {
+        stage('Checkout') {
+            steps {
+                checkout([$class: 'GitSCM', branches: [[name: '*/main']], extensions: [], userRemoteConfigs: [[credentialsId: '90284ade-f2c3-437e-aa76-ac2272ae74ca', url: 'https://github.com/Olaoluwadunni/SCA-Cloud-School-Application.git']]])
+            }
+        }
+        stage ('Build') {
+            steps   {
+                git branch: 'main', credentialsId: '90284ade-f2c3-437e-aa76-ac2272ae74ca', url: 'https://github.com/Olaoluwadunni/SCA-Cloud-School-Application.git'
+                bat 'python SCA.py'
+            }
+        }
+    
+        stage ('Test')  {
+            steps {
+                echo 'This Build Job has been tested'
+            }
+        }
+    }
+    
+}
